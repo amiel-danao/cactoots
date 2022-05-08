@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "829920313384",
+    "firebase_url": "https://cactoots-544c1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cactoots-544c1",
+    "storage_bucket": "cactoots-544c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829920313384:android:ac7ad48ee52aaf12f6751d",
+        "android_client_info": {
+          "package_name": "com.thesis.cactoots"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829920313384-9vn95gtbpr31dukmis8o08uekdqhsrs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDcN4pWUKccljNh7Bswts4jE6kKbGHGJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829920313384-9vn95gtbpr31dukmis8o08uekdqhsrs5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
