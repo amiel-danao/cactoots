@@ -1,4 +1,4 @@
-package com.thesis.cactoots.java.ui.gallery;
+package com.thesis.cactoots.java.ui.cart;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.thesis.cactoots.java.databinding.FragmentGalleryBinding;
+import com.thesis.cactoots.java.databinding.FragmentCartBinding;
 
-public class GalleryFragment extends Fragment {
+public class CartFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentCartBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        CartViewModel cartViewModel =
+                new ViewModelProvider(this).get(CartViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentCartBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        cartViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
