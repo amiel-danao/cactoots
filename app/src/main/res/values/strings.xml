@@ -11,4 +11,7 @@
     <string name="menu_shop">Shop</string>
     <string name="menu_cart" tools:ignore="ExtraTranslation">My Cart</string>
     <string name="menu_profile" tools:ignore="ExtraTranslation">My Profile</string>
+    <string name="privacy_url">https://www.privacypolicygenerator.info/live.php?token=ODuBorWW8F6GkLNbJrH4oPf7iTuTzR1c</string>
+    <string name="tos_url">https://www.termsofservicegenerator.net/live.php?token=HPi9AFqOoZDljQN1HcTJoz51zBXAuWG6</string>
+
 </resources>

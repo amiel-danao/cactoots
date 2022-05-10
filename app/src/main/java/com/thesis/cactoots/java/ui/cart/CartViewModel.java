@@ -10,7 +10,7 @@ public class CartViewModel extends ViewModel {
 
     public CartViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("Your cart is empty");
     }
 
     public LiveData<String> getText() {

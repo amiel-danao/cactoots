@@ -36,8 +36,12 @@ public class LoginActivity extends AppCompatActivity {
                             .setAvailableProviders(Arrays.asList(
                                     new AuthUI.IdpConfig.GoogleBuilder().build()
                             ))
+                            .setLogo(R.drawable.logo_text_only_black)
                             .setTheme(R.style.AppTheme)
                             .setIsSmartLockEnabled(false)
+                            .setAlwaysShowSignInMethodScreen(true)
+                            .setTosAndPrivacyPolicyUrls(getResources().getString(R.string.tos_url),
+                                    getResources().getString(R.string.privacy_url))
                             .build(),
                     RC_SIGN_IN);
         }
@@ -76,5 +80,10 @@ public class LoginActivity extends AppCompatActivity {
             }
             Log.e("Login", "Unknown sign in response");
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        
     }
 }
