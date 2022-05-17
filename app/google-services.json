@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "829920313384-h66bnj16gsv36eoe22m8hjchl8b30ka4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thesis.cactoots",
+            "certificate_hash": "b39b9ef911f3e925e5b42b637b126863f84de9d5"
+          }
+        },
+        {
           "client_id": "829920313384-9vn95gtbpr31dukmis8o08uekdqhsrs5.apps.googleusercontent.com",
           "client_type": 3
         }
