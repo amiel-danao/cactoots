@@ -12,7 +12,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.thesis.cactoots.java.R;
 import com.thesis.cactoots.models.Item;
-import com.thesis.utilities.Generic;
+import com.thesis.cactoots.utilities.Generic;
 
 import org.w3c.dom.Text;
 
