@@ -6,6 +6,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
 import com.bumptech.glide.Glide;
+import android.content.Context;
 
 public class Generic {
     public static final String TAG = "logTag";
