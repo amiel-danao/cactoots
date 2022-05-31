@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.thesis.utilities.Generic;
+import com.thesis.cactoots.utilities.Generic;
 import com.thesis.cactoots.models.Item;
 
 import com.thesis.cactoots.java.databinding.FragmentItemPreviewBinding;
@@ -17,7 +17,7 @@ import com.thesis.cactoots.java.databinding.FragmentItemPreviewBinding;
 public class ItemPreviewFragment extends Fragment {
 
     private FragmentItemPreviewBinding binding;
-    private static HeroEditFragment instance;
+    private static ItemPreviewFragment instance;
     private Item itemToPreview;
 
     public ItemPreviewFragment() {

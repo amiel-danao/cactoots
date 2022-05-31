@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.thesis.cactoots.java.R;
 import com.thesis.cactoots.java.databinding.FragmentShopBinding;
-import com.thesis.cactoots.java.models.Item;
+import com.thesis.cactoots.models.Item;
 import com.thesis.cactoots.java.views.ItemViewHolder;
 
 public class ShopFragment extends Fragment {

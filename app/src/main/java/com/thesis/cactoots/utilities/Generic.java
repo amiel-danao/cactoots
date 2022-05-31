@@ -1,6 +1,6 @@
 package com.thesis.cactoots.utilities;
 
-import com.thesis.cactoots.java.models.Item;
+import com.thesis.cactoots.models.Item;
 import android.widget.ImageView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.ListResult;
