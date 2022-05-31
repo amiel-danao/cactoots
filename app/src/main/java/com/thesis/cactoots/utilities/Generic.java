@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 public class Generic {
     public static final String TAG = "logTag";
     public static final String ITEM_TO_PREVIEW = "ITEM_TO_PREVIEW";
+    public static final String FRAGMENT_BACK_STACK = "FRAGMENT_BACK_STACK";
 
 
     public static void fetchImage(Item item, Context context, ImageView image){
