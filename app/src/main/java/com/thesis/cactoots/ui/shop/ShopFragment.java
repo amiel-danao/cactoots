@@ -65,8 +65,8 @@ public class ShopFragment extends Fragment {
                 // ...
                 holder.bindItem(model, getContext());
                 
-                holder.getItemImage().setTag(model);
-                holder.getItemImage().setOnClickListener(viewItemClickListener);
+                holder.getItemImageView().setTag(model);
+                holder.getItemImageView().setOnClickListener(viewItemClickListener);
                 holder.getItemNameView().setTag(model);
                 holder.getItemNameView().setOnClickListener(viewItemClickListener);
             }

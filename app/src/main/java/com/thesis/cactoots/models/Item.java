@@ -2,8 +2,9 @@ package com.thesis.cactoots.models;
 
 import java.util.Date;
 import java.util.Map;
+import java.io.Serializable;
 
-public class Item {
+public class Item implements Serializable{
     private String id;
     private String name;
     private Map<String, Integer> price;

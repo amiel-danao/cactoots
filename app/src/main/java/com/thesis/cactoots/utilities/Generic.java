@@ -7,6 +7,8 @@ import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
 import com.bumptech.glide.Glide;
 import android.content.Context;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 public class Generic {
     public static final String TAG = "logTag";

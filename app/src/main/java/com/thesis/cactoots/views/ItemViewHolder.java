@@ -8,8 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.thesis.cactoots.java.R;
 import com.thesis.cactoots.models.Item;
 import com.thesis.cactoots.utilities.Generic;
