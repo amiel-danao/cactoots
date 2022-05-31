@@ -1,4 +1,4 @@
-package com.thesis.cactoots.java.models;
+package com.thesis.cactoots.models;
 
 import java.util.Date;
 import java.util.Map;

@@ -8,14 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.ListResult;
-import com.google.firebase.storage.StorageReference;
 import com.thesis.cactoots.java.R;
-import com.thesis.cactoots.java.models.Item;
+import com.thesis.cactoots.models.Item;
+import com.thesis.utilities.Generic;
 
 import org.w3c.dom.Text;
 
@@ -40,9 +37,8 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
         format = NumberFormat.getCurrencyInstance();
         format.setMaximumFractionDigits(0);
         format.setCurrency(Currency.getInstance("PHP"));
-
-
     }
+
 
     public void bindItem(Item item, Context context){
         txtItemName.setText(item.getName());
@@ -60,22 +56,18 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
             itemPrice.setText(format.format(item.getPrice().get(key1)));
         }
 
-        fetchImage(item, context);
+        Generic.fetchImage(item, context, itemImage);
     }
 
-    private void fetchImage(Item item, Context context){
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference listRef = storage.getReference().child(item.getId());
-
-        listRef.listAll()
-            .addOnSuccessListener(listResult -> Glide.with(context)
-                    .load(listResult.getItems().get(0))
-                    .into(itemImage))
-            .addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    // Uh-oh, an error occurred!
-                }
-            });
+    public TextView getItemNameView(){
+        return txtItemName;
     }
+
+    public TextView getItemImageView(){
+        return itemImage;
+    }
+
+    
+
+    
 }

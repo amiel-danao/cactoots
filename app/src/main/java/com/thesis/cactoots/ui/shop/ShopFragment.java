@@ -64,20 +64,27 @@ public class ShopFragment extends Fragment {
                 // Bind the item to the view holder
                 // ...
                 holder.bindItem(model, getContext());
+                
+                holder.getItemImage().setTag(model);
+                holder.getItemImage().setOnClickListener(viewItemClickListener);
+                holder.getItemNameView().setTag(model);
+                holder.getItemNameView().setOnClickListener(viewItemClickListener);
             }
         };
     }
 
+    private final View.OnClickListener viewItemClickListener = view -> {
+        Item selectedItem = (Item)view.getTag();
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        Fragment fragment = ItemPreviewFragment.getInstance(selectedItem);
+        ft.add(R.id.nav_host_fragment_content_main, fragment);
+        ft.addToBackStack(Generic.FRAGMENT_BACK_STACK).commit();
+	};
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        ShopViewModel shopViewModel =
-                new ViewModelProvider(this).get(ShopViewModel.class);
-
         binding = FragmentShopBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-        //final TextView textView = binding.textHome;
-        //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

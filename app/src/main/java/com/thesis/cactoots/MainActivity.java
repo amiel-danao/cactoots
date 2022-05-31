@@ -20,8 +20,6 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.thesis.cactoots.java.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!isLoggedIn()){
+        if(!LoginActivity.isLoggedIn()){
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
 
@@ -62,11 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private boolean isLoggedIn(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        return (user != null);
-    }
+   
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
