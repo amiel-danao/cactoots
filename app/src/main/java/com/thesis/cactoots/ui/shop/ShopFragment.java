@@ -23,6 +23,8 @@ import com.thesis.cactoots.models.Item;
 import com.thesis.cactoots.java.views.ItemViewHolder;
 import com.thesis.cactoots.ui.item.ItemPreviewFragment;
 
+import com.thesis.cactoots.utilities.Generic;
+
 public class ShopFragment extends Fragment {
 
     private FragmentShopBinding binding;
