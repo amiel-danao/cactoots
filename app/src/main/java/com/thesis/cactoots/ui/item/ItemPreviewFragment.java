@@ -13,17 +13,30 @@ import androidx.fragment.app.Fragment;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderViewAdapter;
+import com.thesis.cactoots.adapters.SliderAdapterExample;
+import com.thesis.cactoots.models.SliderItem;
 import com.thesis.cactoots.utilities.Generic;
 import com.thesis.cactoots.models.Item;
 import com.thesis.cactoots.java.R;
 
 import com.thesis.cactoots.java.databinding.FragmentItemPreviewBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ItemPreviewFragment extends Fragment {
 
     private FragmentItemPreviewBinding binding;
     private static ItemPreviewFragment instance;
     private Item itemToPreview;
+    private SliderAdapterExample sliderAdapter;
 
     public ItemPreviewFragment() {
         // Required empty public constructor
@@ -61,7 +74,39 @@ public class ItemPreviewFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Generic.fetchImage(itemToPreview, getActivity(), binding.itemImage);
+        sliderAdapter = new SliderAdapterExample(getActivity());
+        binding.imageSlider.setSliderAdapter(sliderAdapter);
+
+        binding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        binding.imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        binding.imageSlider.startAutoCycle();
+        getItemImages();
+    }
+
+    private void getItemImages(){
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference listRef = storage.getReference().child(itemToPreview.getId());
+
+
+        listRef.listAll()
+        .addOnSuccessListener(listResult -> {
+            List<SliderItem> images = new ArrayList<>();
+
+            for (StorageReference imageRef :
+                    listResult.getItems()) {
+                SliderItem item = new SliderItem(imageRef);
+
+                images.add(item);
+            }
+
+            sliderAdapter.renewItems(images);
+        })
+        .addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                // Uh-oh, an error occurred!
+            }
+        });
     }
 
     @Override

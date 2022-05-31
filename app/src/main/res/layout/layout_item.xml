@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background2"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -12,6 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/gradient_background1"
             android:orientation="vertical">
 
             <ImageView
@@ -48,11 +50,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
-                    android:background="@color/design_default_color_secondary"
+                    android:background="@color/fui_bgAnonymous"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:text="4.7"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold" />
 
                 <TextView

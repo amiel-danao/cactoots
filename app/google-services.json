@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "829920313384-gbrmgm4e6s4f5qtkf0bguun4ntoblu6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thesis.cactoots",
+            "certificate_hash": "d532d677acc7a8135b264c03a80200eb0993d152"
+          }
+        },
+        {
+          "client_id": "829920313384-grlm7plruuhstjsu2m9o916duvpj6272.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thesis.cactoots",
+            "certificate_hash": "4df590748bb75c78fba6265296c295af7ebba0e8"
+          }
+        },
+        {
           "client_id": "829920313384-h66bnj16gsv36eoe22m8hjchl8b30ka4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
