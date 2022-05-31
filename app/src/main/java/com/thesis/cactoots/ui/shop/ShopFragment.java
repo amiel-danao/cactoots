@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.paging.PagingConfig;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -20,6 +21,7 @@ import com.thesis.cactoots.java.R;
 import com.thesis.cactoots.java.databinding.FragmentShopBinding;
 import com.thesis.cactoots.models.Item;
 import com.thesis.cactoots.java.views.ItemViewHolder;
+import com.thesis.cactoots.ui.item.ItemPreviewFragment;
 
 public class ShopFragment extends Fragment {
 

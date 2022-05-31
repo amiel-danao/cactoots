@@ -61,7 +61,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
         return txtItemName;
     }
 
-    public TextView getItemImageView(){
+    public ImageView getItemImageView(){
         return itemImage;
     }
 

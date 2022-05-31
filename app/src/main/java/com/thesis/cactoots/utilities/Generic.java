@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide;
 import android.content.Context;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import androidx.annotation.NonNull;
 
 public class Generic {
     public static final String TAG = "logTag";

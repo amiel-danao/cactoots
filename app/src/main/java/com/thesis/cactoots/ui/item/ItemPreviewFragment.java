@@ -15,6 +15,7 @@ import androidx.databinding.ViewDataBinding;
 
 import com.thesis.cactoots.utilities.Generic;
 import com.thesis.cactoots.models.Item;
+import com.thesis.cactoots.java.R;
 
 import com.thesis.cactoots.java.databinding.FragmentItemPreviewBinding;
 
